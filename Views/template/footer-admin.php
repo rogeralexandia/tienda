@@ -5,7 +5,7 @@
 </div> <!-- content -->
 
 <footer class="footer">
-  © <?php echo date('Y'); ?> <span class="d-none d-md-inline-block"><i class="mdi mdi-heart text-danger"></i> </span>
+  © <?php echo date('Y'); ?> <span class="d-none d-md-inline-block"><i class="fas fa-cog text-primary"></i> </span>
 </footer>
 
 </div>
@@ -39,3 +39,5 @@
 <script src="<?php echo BASE_URL; ?>public/admin/js/es-ES.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/toastify-js.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>public/admin/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL; ?>public/admin/js/page/main.js"></script>
+

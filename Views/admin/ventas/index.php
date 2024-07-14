@@ -16,7 +16,10 @@ include_once 'Views/template/header-admin.php'; ?>
     </div>
 </div>
 <!-- end page title -->
-
+<!--contador de paginas--> 
+<div id="contador-visitas" style="text-align: right;">
+    <p>Visitas a la página de Ventas: <span id="visitas"></span></p>
+</div>
 <div class="card">
     <div class="card-body">
         <h5 class="card-title text-center"><i class="fas fa-cash-register"></i> Nueva Venta</h5>
@@ -96,6 +99,11 @@ include_once 'Views/template/header-admin.php'; ?>
 
 <script src="<?php echo BASE_URL . 'public/admin/js/jquery-ui.min.js'; ?>"></script>
 <script src="<?php echo BASE_URL . 'public/admin/js/page/ventas.js'; ?>"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('ventas');
+    </script>
 
 </body>
 

@@ -187,8 +187,16 @@
 <!-- Latest Product Section End -->
 
 <?php include "Views/template/footer.php"; ?>
-
+<!--contador de paginas--> 
+<div id="contador-visitas" style="text-align: center;">
+    <p>Visitas a la página: <span id="visitas"></span></p>
+</div>
 <script src="<?php echo BASE_URL; ?>public/js/cart.js"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('cart');
+    </script>
 
 </body>
 

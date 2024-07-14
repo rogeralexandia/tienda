@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+// index.php o cualquier otro archivo principal
 
+// Incluir el archivo de configuración
+require_once 'Config/config.php';
+
+// Resto del código...
+//echo "La fecha y hora actual es: " . date('Y-m-d H:i:s');
+
+?>
 <head>
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>grupo15sa</title>
+    <title>grupo08sa</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="shortcut icon" href="<?php echo BASE_URL; ?>public/img/factory.jpeg">
-    <!-- contador de vistas -->
-    <div id="sfcam6qstay5919xm3k2rzu7bhjs39xgr2m"></div><script type="text/javascript" src="https://counter7.optistats.ovh/private/counter.js?c=am6qstay5919xm3k2rzu7bhjs39xgr2m&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para web"><img src="https://counter7.optistats.ovh/private/contadorvisitasgratis.php?c=am6qstay5919xm3k2rzu7bhjs39xgr2m" border="0" title="contador de visitas para web" alt="contador de visitas para web"></a></noscript>
-    <!-- morris css -->
+       <!-- morris css -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/admin/plugins/morris/morris.css">
 
     <link href="<?php echo BASE_URL; ?>public/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -23,6 +31,10 @@
     <link href="<?php echo BASE_URL; ?>public/admin/css/style.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/css/toastify.min.css" />
+    
+    <!-- Incluir el modo oscuro para el modo actual -->
+    
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/admin/css/estilos.css" />
 
 </head>
 
@@ -43,6 +55,7 @@
     </div>
 
     <!-- Begin page -->
+    
     <div id="wrapper">
 
         <!-- ========== Left Sidebar Start ========== -->
@@ -94,6 +107,10 @@
                             <a href="<?php echo BASE_URL . 'pedidos'; ?>" class="waves-effect"><i class="fas fa-list-alt mr-3"></i> <span> Pedidos </span> </a>
                         </li>
 
+                        <li class="">
+                            <a href="<?php echo BASE_URL . 'devoluciones'; ?>" class="waves-effect"><i class="fas fa-recycle mr-3"></i> <span> Devoluciones </span> </a>
+                        </li>
+
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="fas fa-shopping-cart mr-3"></i> <span> Ventas </span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
@@ -120,7 +137,7 @@
 
                     <div class="topbar-left	d-none d-lg-block">
                         <div class="text-center">
-                            <a href="<?php echo BASE_URL; ?>" class="logo"><img src="<?php echo BASE_URL; ?>public/img/logo.png" height="22" alt="logo"></a>
+                            <a href="<?php echo BASE_URL; ?>" class="logo"><img src="<?php echo BASE_URL; ?>public/img/factory.jpeg" height="55" alt="logo"></a>
                         </div>
                     </div>
 
@@ -137,6 +154,7 @@
                                     <a class="dropdown-item" href="<?php echo BASE_URL . 'usuarios/perfil'; ?>"><i class="fas fa-user"></i> Perfil</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="<?php echo BASE_URL . 'admin/salir'; ?>"><i class="fas fa-power-off"></i> Logout</a>
+                                    
                                 </div>
                             </li>
 
@@ -159,3 +177,9 @@
                 <div class="page-content-wrapper ">
 
                     <div class="container-fluid">
+                        <button class="switch" id="switch">
+                                        <span><i class="fas fa-sun"></i></span>
+                                        <span><i class="fas fa-moon"></i></span>
+                                    </button>
+                    
+                   

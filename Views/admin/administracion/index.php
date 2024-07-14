@@ -16,6 +16,10 @@
 </div>
 <!-- end page title -->
 
+<!--contador de paginas--> 
+<div id="contador-visitas" style="text-align: right;">
+    <p>Visitas a la página de Dashboard: <span id="visitas"></span></p>
+</div>
 <div class="row">
     <div class="col-xl-4 col-md-6">
         <div class="card bg-primary mini-stat">
@@ -84,18 +88,20 @@
     <div class="col-xl-7">
         <div class="card">
             <div class="card-body">
-                <div id="chart3"></div>
+                <div id="chart3" style="height: 360px;"></div>
             </div>
         </div>
     </div>
     <div class="col-xl-5">
         <div class="card">
             <div class="card-body mb-3">
-                <div id="chart8"></div>
+                <div id="chart8" style="height: 360px;"></div>
             </div>
         </div>
     </div>
 </div>
+
+<!--<button id="btnBackup">Backup</button>-->
 <!-- end row -->
 
 <?php include_once 'Views/template/footer-admin.php'; ?>
@@ -103,6 +109,11 @@
 <!-- dashboard js -->
 <script src="<?php echo BASE_URL; ?>public/admin/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
 <script src="<?php echo BASE_URL; ?>public/admin/js/page/dashboard.js"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('administracion');
+    </script>
 
 </body>
 

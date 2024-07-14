@@ -43,6 +43,19 @@ class ProductosModel extends Query{
         $array = array($nombre, $descripcion, $precio, $cantidad, $destino, $categoria, $id);
         return $this->save($sql, $array);
     }
+    public function getStockActual($id_producto)
+{
+    $sql = "SELECT cantidad FROM productos WHERE id = ?";
+    $array = array($id_producto);
+    $result = $this->select($sql, $array);
+
+    if ($result) {
+        return $result['cantidad']; // Devuelve la cantidad del producto encontrado
+    } else {
+        return 0; // Devuelve 0 si no se encontró ningún producto con ese id
+    }
+}
+
 
 }
  

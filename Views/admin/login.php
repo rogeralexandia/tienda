@@ -45,7 +45,7 @@
                             <div class="p-2">
                                 <h4 class="text-muted float-right font-18 mt-4">Sign In</h4>
                                 <div>
-                                    <a href="<?php echo BASE_URL; ?>" class="logo logo-admin"><img src="<?php echo BASE_URL; ?>public/img/img1.jpg" height="50" alt="logo"></a>
+                                    <a href="<?php echo BASE_URL; ?>" class="logo logo-admin"><img src="<?php echo BASE_URL; ?>public/img/factory.jpeg" height="50" alt="logo"></a>
                                 </div>
                             </div>
 

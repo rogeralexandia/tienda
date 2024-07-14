@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <img src="<?php echo BASE_URL . 'public/img/logo.png'; ?>" alt="">
+    <img src="<?php echo BASE_URL . 'public/img/factory.jpeg'; ?>" alt="">
     <div class="datos-empresa">
         <p><?php echo $data['empresa']['nombre']; ?></p>
         <p><?php echo $data['empresa']['telefono']; ?></p>

@@ -30,40 +30,53 @@ class AdminModel extends Query{
     }
 
     public function comprasMes($desde, $hasta)
-    {
-        $sql = "SELECT SUM(IF(MONTH(fecha) = 1, total, 0)) AS ene,
-        SUM(IF(MONTH(fecha) = 2, total, 0)) AS feb,
-        SUM(IF(MONTH(fecha) = 3, total, 0)) AS mar,
-        SUM(IF(MONTH(fecha) = 4, total, 0)) AS abr,
-        SUM(IF(MONTH(fecha) = 5, total, 0)) AS may,
-        SUM(IF(MONTH(fecha) = 6, total, 0)) AS jun,
-        SUM(IF(MONTH(fecha) = 7, total, 0)) AS jul,
-        SUM(IF(MONTH(fecha) = 8, total, 0)) AS ago,
-        SUM(IF(MONTH(fecha) = 9, total, 0)) AS sep,
-        SUM(IF(MONTH(fecha) = 10, total, 0)) AS oct,
-        SUM(IF(MONTH(fecha) = 11, total, 0)) AS nov,
-        SUM(IF(MONTH(fecha) = 12, total, 0)) AS dic 
-        FROM ventas WHERE fecha BETWEEN '$desde' AND '$hasta' AND tipo = 1 AND estado = 1";
-        return $this->select($sql);
-    }
+{
+    $sql = "SELECT 
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 1 THEN total ELSE 0 END) AS ene,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 2 THEN total ELSE 0 END) AS feb,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 3 THEN total ELSE 0 END) AS mar,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 4 THEN total ELSE 0 END) AS abr,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 5 THEN total ELSE 0 END) AS may,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 6 THEN total ELSE 0 END) AS jun,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 7 THEN total ELSE 0 END) AS jul,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 8 THEN total ELSE 0 END) AS ago,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 9 THEN total ELSE 0 END) AS sep,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 10 THEN total ELSE 0 END) AS oct,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 11 THEN total ELSE 0 END) AS nov,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 12 THEN total ELSE 0 END) AS dic
+            FROM ventas 
+            WHERE fecha BETWEEN :desde AND :hasta 
+                AND tipo = 1 
+                AND estado = 1";
+    
+    $params = array(':desde' => $desde, ':hasta' => $hasta);
+    return $this->select($sql, $params);
+}
 
-    public function ventasMes($desde, $hasta)
-    {
-        $sql = "SELECT SUM(IF(MONTH(fecha) = 1, total, 0)) AS ene,
-        SUM(IF(MONTH(fecha) = 2, total, 0)) AS feb,
-        SUM(IF(MONTH(fecha) = 3, total, 0)) AS mar,
-        SUM(IF(MONTH(fecha) = 4, total, 0)) AS abr,
-        SUM(IF(MONTH(fecha) = 5, total, 0)) AS may,
-        SUM(IF(MONTH(fecha) = 6, total, 0)) AS jun,
-        SUM(IF(MONTH(fecha) = 7, total, 0)) AS jul,
-        SUM(IF(MONTH(fecha) = 8, total, 0)) AS ago,
-        SUM(IF(MONTH(fecha) = 9, total, 0)) AS sep,
-        SUM(IF(MONTH(fecha) = 10, total, 0)) AS oct,
-        SUM(IF(MONTH(fecha) = 11, total, 0)) AS nov,
-        SUM(IF(MONTH(fecha) = 12, total, 0)) AS dic 
-        FROM ventas WHERE fecha BETWEEN '$desde' AND '$hasta' AND tipo = 2 AND estado = 1";
-        return $this->select($sql);
-    }
+public function ventasMes($desde, $hasta)
+{
+    $sql = "SELECT 
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 1 THEN total ELSE 0 END) AS ene,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 2 THEN total ELSE 0 END) AS feb,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 3 THEN total ELSE 0 END) AS mar,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 4 THEN total ELSE 0 END) AS abr,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 5 THEN total ELSE 0 END) AS may,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 6 THEN total ELSE 0 END) AS jun,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 7 THEN total ELSE 0 END) AS jul,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 8 THEN total ELSE 0 END) AS ago,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 9 THEN total ELSE 0 END) AS sep,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 10 THEN total ELSE 0 END) AS oct,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 11 THEN total ELSE 0 END) AS nov,
+                SUM(CASE WHEN EXTRACT(MONTH FROM fecha) = 12 THEN total ELSE 0 END) AS dic
+            FROM ventas 
+            WHERE fecha BETWEEN :desde AND :hasta 
+                AND tipo = 2 
+                AND estado = 1";
+    
+    $params = array(':desde' => $desde, ':hasta' => $hasta);
+    return $this->select($sql, $params);
+}
+
     
 }
  

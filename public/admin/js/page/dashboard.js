@@ -7,8 +7,8 @@ $(function () {
 function pedidosMes() {
   fetch(base_url + "admin/comprasMes")
     .then((res) => res.json())
-    .catch((error) => console.error("Error:", error))
-    .then(function (info) {
+    .then((info) => {
+      console.log("Datos recibidos para pedidosMes:", info);  // Log para verificar los datos recibidos
       var options = {
         series: [
           {
@@ -92,13 +92,15 @@ function pedidosMes() {
       };
       var chart = new ApexCharts(document.querySelector("#chart3"), options);
       chart.render();
-    });
+    })
+    .catch((error) => console.error("Error:", error));
 }
+
 function topGrafico() {
   fetch(base_url + "admin/topProductos")
     .then((res) => res.json())
-    .catch((error) => console.error("Error:", error))
-    .then(function (info) {
+    .then((info) => {
+      console.log("Datos recibidos para topGrafico:", info);  // Log para verificar los datos recibidos
       let productos = [];
       let cantidad = [];
 
@@ -121,7 +123,7 @@ function topGrafico() {
           },
         },
         title: {
-          text: "Productos mas vendidos",
+          text: "Productos mas vendidos ",
           align: "left",
           style: {
             fontSize: "16px",
@@ -149,8 +151,10 @@ function topGrafico() {
       };
       var chart = new ApexCharts(document.querySelector("#chart8"), options);
       chart.render();
-    });
+    })
+    .catch((error) => console.error("Error:", error));
 }
+
 // sb-zclre14462343@personal.example.com
 // Email ID:
 

@@ -15,7 +15,9 @@
     </div>
 </div>
 <!-- end page title -->
-
+<div id="contador-visitas" style="text-align: right;">
+    <p>Visitas a la página de Negocio: <span id="visitas"></span></p>
+</div>
 <div class="card">
     <div class="card-body">
         <form id="frmRegistro" autocomplete="off">
@@ -99,6 +101,12 @@
 <?php include_once 'Views/template/footer-admin.php'; ?>
 
 <script src="<?php echo BASE_URL . 'public/admin/js/page/negocio.js'; ?>"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('negocio');
+    </script>
+
 
 </body>
 

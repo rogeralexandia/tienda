@@ -15,7 +15,10 @@
     </div>
 </div>
 <!-- end page title -->
-
+<!--contador de paginas--> 
+<div id="contador-visitas" style="text-align: right;">
+    <p>Visitas a la página de Historial: <span id="visitas"></span></p>
+</div>
 <div class="card">
     <div class="card-body">
         <div class="table-responsive">
@@ -41,6 +44,11 @@
 <?php include_once 'Views/template/footer-admin.php'; ?>
 
 <script src="<?php echo BASE_URL . 'public/admin/js/page/historial_ventas.js'; ?>"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('historial');
+    </script>
 
 </body>
 

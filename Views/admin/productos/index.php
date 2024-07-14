@@ -14,9 +14,11 @@
         <!-- end page-title-box -->
     </div>
 </div>
+<div id="contador-visitas" style="text-align: right;">
+    <p>Visitas a la página de productos: <span id="visitas"></span></p>
+</div>
 <!-- end page title -->
-
-<button class="btn btn-primary mb-2" type="button" id="nuevo_registro">Nuevo</button>
+<button class="btn btn-primary mb-2" type="button" id="nuevo_registro">Nuevo Producto</button>
 
 <div class="card">
     <div class="card-body">
@@ -117,11 +119,17 @@
             </form>
         </div>
     </div>
+    
 </div>
 
 <?php include_once 'Views/template/footer-admin.php'; ?>
 
 <script src="<?php echo BASE_URL . 'public/admin/js/page/productos.js'; ?>"></script>
+<script src="<?php echo BASE_URL . 'public/admin/js/page/contador_visitas.js'; ?>"></script>
+<script>
+        // Clave única para la página de productos
+        incrementarVisitas('productos');
+    </script>
 
 </body>
 

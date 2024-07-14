@@ -7,8 +7,8 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grupo15sa</title>
-    <div id="sfcd4rk5pc452t4sqg6sklkjyc4gm2awtmw"></div><script type="text/javascript" src="https://counter7.optistats.ovh/private/counter.js?c=d4rk5pc452t4sqg6sklkjyc4gm2awtmw&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img src="https://counter7.optistats.ovh/private/contadorvisitasgratis.php?c=d4rk5pc452t4sqg6sklkjyc4gm2awtmw" border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a></noscript>
+    <title>Grupo08sa</title>
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -73,7 +73,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> <?php echo $data['negocio']['correo']; ?></li>
-                <li>Tienda online</li>
+                <li>Infor Factory</li>
             </ul>
         </div>
     </div>
@@ -88,7 +88,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> <?php echo $data['negocio']['correo']; ?></li>
-                                <li>Tienda online</li>
+                                <li>Tienda online Infor Factory</li>
                             </ul>
                         </div>
                     </div>

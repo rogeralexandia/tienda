@@ -10,7 +10,7 @@ let tblProductos;
 
 const myModal = new bootstrap.Modal(document.getElementById("nuevoModal"));
 
-document.addEventListener("DOMContentLoaded", function () {
+
   tblProductos = $("#tblProductos").DataTable({
     ajax: {
       url: base_url + "productos/listar",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   });
-});
+
 
 function eliminarPro(idPro) {
   Swal.fire({
