@@ -1,5 +1,5 @@
 <?php
-const BASE_URL = "https://www.tecnoweb.org.bo/inf513/grupo15sa/Proyecto2/Tienda";
+const BASE_URL = "https://www.tecnoweb.org.bo/inf513/grupo08sa/Proyecto2/Tienda";
 const HOST = "mail.tecnoweb.org.bo";
 const USER = "grupo08sa";
 const PASS = "grup008grup008";
