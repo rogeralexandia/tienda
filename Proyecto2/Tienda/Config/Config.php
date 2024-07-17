@@ -5,7 +5,7 @@ const USER = "grupo08sa";
 const PASS = "grup008grup008";
 const DB = "db_grupo08sa";
 const CHARSET = "charset=utf8";
-const TITLE = "SHOP";
+const TITLE = "InforFactory";
 const MONEDA = "USD";
 const CLIENT_ID = "Adzhc7aGhTbkZjnPyUNI44tEwoABWfjdR4LM1aQUkySM5sETTgkarRJZ_Ck59izwBos3A0J9Frq2_dQu"; 
 //local
@@ -13,7 +13,7 @@ const CLIENT_ID = "Adzhc7aGhTbkZjnPyUNI44tEwoABWfjdR4LM1aQUkySM5sETTgkarRJZ_Ck59
 //const BASE_URL = "http://localhost/Tienda/";
 /*const HOST = "localhost";
 const USER = "postgres";
-const PASS = "mario251985";
+const PASS = "molotrece";
 const DB = "prueba008";
 const CHARSET = "charset=utf8";
 const TITLE = "SHOP";
